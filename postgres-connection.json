@@ -1,0 +1,9 @@
+{
+  "host": "localhost",
+  "port": 1234,
+  "dbname": "Old Portfolio 2",
+  "user": "fikretacar",
+  "password": "PharmacyLocal2026!",
+  "sslmode": "prefer",
+  "connect_timeout": 5
+}
