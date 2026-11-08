@@ -1,9 +1,10 @@
 {
-  "host": "localhost",
+  "host": "portfolio-db.acarise.net",
   "port": 1234,
   "dbname": "Old Portfolio 2",
-  "user": "fikretacar",
-  "password": "PharmacyLocal2026!",
-  "sslmode": "prefer",
-  "connect_timeout": 5
+  "user": "portfolio",
+  "password": "portfolio123",
+  "sslmode": "verify-full",
+  "connect_timeout": 5,
+  "sslrootcert": "certificates/isrg-roots.pem"
 }

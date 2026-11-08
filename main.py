@@ -1,4 +1,7 @@
 import customtkinter as tk
+from pathlib import Path as _TelemetryPath
+from frontend_activity import install_tk as _install_frontend_telemetry
+_frontend_reports = _install_frontend_telemetry(_TelemetryPath(__file__).resolve().parent, 'Prototype 2', 'Old Portfolio 2')
 from database import connect_portfolio, Error, sql, PORTFOLIO_NOTE, PORTFOLIO_USER
 import threading
 from CTkMenuBar import *

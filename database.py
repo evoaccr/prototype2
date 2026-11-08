@@ -25,6 +25,11 @@ def load_connection_parameters():
         raise psycopg.OperationalError(
             "Missing connection parameters in postgres-connection.json: " + ", ".join(sorted(missing))
         )
+    parameters.setdefault("sslmode", "verify-full")
+    for name in ("sslrootcert", "sslcert", "sslkey"):
+        if parameters.get(name):
+            certificate = Path(parameters[name])
+            parameters[name] = str(certificate if certificate.is_absolute() else CONNECTION_FILE.parent / certificate)
     return parameters
 
 
